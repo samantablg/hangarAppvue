@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Productos de la tienda</h2>
+    <h2>Prctos de la tienda</h2>
     <hr>
     <br>
     <ul>
