@@ -4,7 +4,7 @@
       <li><router-link class="link" to="/">Home</router-link></li>
       <li><router-link class="link" to="hangars" active-class="active">Hangar</router-link></li>
       <li><router-link class="link" to="products" active-class="active">Product</router-link></li>
-      <li><router-link class="link" to="products" active-class="active">Shop</router-link></li>
+      <li><router-link class="link" to="shop" active-class="active">Shop</router-link></li>
       <li><a class="link" @click="logout">Logout</a></li>
     </ul>
   </nav>
@@ -39,27 +39,30 @@ nav {
 
 ul {
   height: 100%;
+  width: 100%;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-  height: 50%;
-  display: inline-flex;
-  margin : 30px;
+  height: 100%;
+  margin-left: 30px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .link {
+  margin-top: 33px;
   text-decoration: none !important;
   font-size: large;
   color: rgb(209, 232, 236);
+  vertical-align: middle !important;
 }
 
-.active {
-  border-bottom: 3px solid #0C9;
+.active, .link:hover {
+  border-bottom: 5px solid #0C9;
 }
 
-li:hover {
-    border-bottom: 3px solid #0C9;
-}
 </style>

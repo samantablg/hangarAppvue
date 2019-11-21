@@ -1,6 +1,7 @@
 import Home from '../components/Home.vue';
 import Hangars from '../components/Hangars';
 import Products from '../components/Products.vue';
+import Shop from '../components/Shop.vue'
 import Login from '../components/Login.vue';
 import VueRouter from 'vue-router';
 import { store } from './store/store.js';
@@ -26,6 +27,13 @@ export const routes = [
     {
         path: '/products',
         component: Products,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/shop',
+        component: Shop,
         meta: {
             requiresAuth: true
         }

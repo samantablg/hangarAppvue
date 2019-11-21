@@ -76,7 +76,7 @@ export const store = new Vuex.Store({
         loadProducts({ commit }) {
             return new Promise((resolve, reject) => {
                 axios({
-                        url: 'http://localhost:8888/api/products',
+                        url: 'http://localhost:8888/api/productsExtended',
                         method: 'GET'
                     })
                     .then(resp => {
@@ -91,6 +91,7 @@ export const store = new Vuex.Store({
         }
     },
     getters: {
+        productsOfShop: (state) => state.products.filter(product => product.price != 0 && product.hangars.length > 0),
         isLoggedIn: (state) => !(state.auth.token == ''),
         authStatus: (state) => state.auth.status
     }

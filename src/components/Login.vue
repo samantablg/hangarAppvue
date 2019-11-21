@@ -1,13 +1,16 @@
 <template>
-  <form class="login" @submit.prevent="login">
+  <div class="container">
+    <form class="login" @submit.prevent="login">
      <h1>Sign in</h1>
+     <br>
      <label>User name</label>
      <input required v-model="username" type="text" placeholder="Username"/>
      <label>Password</label>
      <input required v-model="password" type="password" placeholder="Password"/>
-     <hr/>
+     <br>
      <button type="submit">Login</button>
    </form>
+  </div>
 </template>
 
 <script>
@@ -32,4 +35,20 @@ export default {
 }
 </script>
 
-<!-- vue-axios monta axios bajpo la instacia $http $http y está disponible en todos los componentes-->
+<style scoped>
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 10%;
+}
+</style>
